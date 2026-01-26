@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
+<!-- <link rel="stylesheet" href="{{ asset('css/contact_confirm.css') }}"> -->
 @endsection
 
 @section('content')
 <div class="confirm__content">
   <div class="confirm__heading">
-    <h2>お問い合わせ内容確認</h2>
+    <h2>Confirm</h2>
   </div>
   <?php print_r($contact['name']) ?>
   <form class="form" action="/contacts" method="post">

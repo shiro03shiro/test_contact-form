@@ -54,6 +54,12 @@
           <td class="confirm-table__select">
             <input type="hidden" name="inquiry_type" value="{{ $contact['inquiry_type'] }}" />
             <select disabled>
+
+
+
+
+
+            
           </td>
         </tr>
         <tr class="confirm-table__row">

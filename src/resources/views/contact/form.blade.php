@@ -39,9 +39,9 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--radio">
-          <label><input type="radio" name="gender" value="male" checked />男性</label>
-          <label><input type="radio" name="gender" value="female" />女性</label>
-          <label><input type="radio" name="gender" value="other" />その他</label>
+          <label><input type="radio" name="gender" value="1:男性" checked />男性</label>
+          <label><input type="radio" name="gender" value="2:女性" />女性</label>
+          <label><input type="radio" name="gender" value="3:その他" />その他</label>
         </div>
         <div class="form__error">
           @error('gender')
@@ -80,7 +80,12 @@
           <input type="tel" name="tel_3" placeholder="5678" value="{{ old('tel_3') }}" />
         </div>
         <div class="form__error">
-          @error('tel')
+
+
+<!-- 要修正 -->
+
+
+        @error('tel')
           {{ $message }}
           @enderror
         </div>
@@ -93,10 +98,10 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="text" name="address_1" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address_1') }}" />
+          <input type="text" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}" />
         </div>
         <div class="form__error">
-          @error('address_1')
+          @error('address')
           {{ $message }}
           @enderror
         </div>
@@ -108,7 +113,7 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="text" name="address_2" placeholder="例:千駄ヶ谷マンション101" value="{{ old('address_2') }}" />
+          <input type="text" name="building" placeholder="例:千駄ヶ谷マンション101" value="{{ old('building') }}" />
         </div>
       </div>
     </div>
@@ -119,18 +124,19 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--select">
-          <select name="inquiry_type">
-<!-- カテゴリーTBを参照するので要修正 -->
-            <option value="" {{ old('inquiry_type') == '' ? 'selected' : '' }} disabled>選択してください</option>
-            <option value="delivery" {{ old('inquiry_type') == 'delivery' ? 'selected' : '' }}>1. 商品のお届けについて</option>
-            <option value="exchange" {{ old('inquiry_type') == 'exchange' ? 'selected' : '' }}>2. 商品の交換について</option>
-            <option value="trouble" {{ old('inquiry_type') == 'trouble' ? 'selected' : '' }}>3. 商品トラブル</option>
-            <option value="shop" {{ old('inquiry_type') == 'shop' ? 'selected' : '' }}>4. ショップへのお問い合わせ</option>
-            <option value="other" {{ old('inquiry_type') == 'other' ? 'selected' : '' }}>5. その他</option>
+          <select name="category_id" class="create-form__item-select">
+            <option value="" {{ old('category_id') == '' ? 'selected' : '' }} disabled>
+              選択してください
+            </option>
+            @foreach($categories as $category)
+              <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                {{ $category->content }}
+              </option>
+            @endforeach
           </select>
         </div>
         <div class="form__error">
-          @error('inquiry_type')
+          @error('category_id')
           {{ $message }}
           @enderror
         </div>
@@ -142,10 +148,10 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--textarea">
-          <textarea name="content" placeholder="お問い合わせ内容をご記載ください。">{{ old('content') }}</textarea>
+          <textarea name="detail" placeholder="お問い合わせ内容をご記載ください。">{{ old('detail') }}</textarea>
         </div>
         <div class="form__error">
-          @error('content')
+          @error('detail')
           {{ $message }}
           @enderror
         </div>

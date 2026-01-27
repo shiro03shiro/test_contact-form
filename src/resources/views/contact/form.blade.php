@@ -120,12 +120,13 @@
       <div class="form__group-content">
         <div class="form__input--select">
           <select name="inquiry_type">
-            <option value="" {{ old('inquiry_type') == '' ? 'selected' : '' }} disabled>選択してください</option>
+<!-- カテゴリーTBを参照するので要修正 -->
+            <!-- <option value="" {{ old('inquiry_type') == '' ? 'selected' : '' }} disabled>選択してください</option>
             <option value="delivery" {{ old('inquiry_type') == 'delivery' ? 'selected' : '' }}>1. 商品のお届けについて</option>
             <option value="exchange" {{ old('inquiry_type') == 'exchange' ? 'selected' : '' }}>2. 商品の交換について</option>
             <option value="trouble" {{ old('inquiry_type') == 'trouble' ? 'selected' : '' }}>3. 商品トラブル</option>
             <option value="shop" {{ old('inquiry_type') == 'shop' ? 'selected' : '' }}>4. ショップへのお問い合わせ</option>
-            <option value="other" {{ old('inquiry_type') == 'other' ? 'selected' : '' }}>5. その他</option>
+            <option value="other" {{ old('inquiry_type') == 'other' ? 'selected' : '' }}>5. その他</option> -->
           </select>
         </div>
         <div class="form__error">

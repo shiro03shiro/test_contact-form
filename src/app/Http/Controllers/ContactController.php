@@ -10,6 +10,13 @@ class ContactController extends Controller
     public function index()
     {
         return view('contact.form');
+// 仮入力
+        $categories = Category::all();
+        return view('category', ['categories' => $categories]);
+
+
+
+
     }
     public function confirm(Request $request)
     {

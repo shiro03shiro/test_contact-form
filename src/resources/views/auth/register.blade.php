@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 @endsection
 
-
+@section('header-nav')
 <nav>
     <ul class="header-nav">
         <li class="header-nav__item">
@@ -12,7 +12,7 @@
         </li>
     </ul>
 </nav>
-
+@endsection
 
 @section('content')
 <div class="register-form__content">

@@ -17,6 +17,9 @@
       <a class="header__logo" href="/">
         FashionablyLate
       </a>
+      @hasSection('header-nav')
+        @yield('header-nav')
+      @endif
     </div>
   </header>
 

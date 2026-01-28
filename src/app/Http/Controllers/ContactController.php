@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Contact;
 use App\Models\Category;
-use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
@@ -12,7 +12,7 @@ class ContactController extends Controller
         $categories = Category::orderBy('id')->get(['id', 'content']);
         return view('contact.form', compact('categories'));
     }
-    public function confirm(Request $request)
+    public function confirm(ContactRequest $request)
     {
         $contact = $request->only(['category_id', 'first_name', 'last_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
 
@@ -23,7 +23,7 @@ class ContactController extends Controller
         $categories = Category::orderBy('id')->get(['id', 'content']);
         return view('contact.confirm', compact('contact'));
     }
-    public function store(Request $request)
+    public function store(ContactRequest $request)
     {
         $contact = $request->only(['category_id', 'first_name', 'last_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
 

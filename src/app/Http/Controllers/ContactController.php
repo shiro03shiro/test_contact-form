@@ -35,4 +35,8 @@ class ContactController extends Controller
         Contact::create($contact);
         return view('contact.thanks');
     }
+    public function admin()
+    {
+        return view('admin.inquiry-management');
+    }
 }

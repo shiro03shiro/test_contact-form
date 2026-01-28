@@ -39,7 +39,7 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--radio">
-          <label><input type="radio" name="gender" value="1:男性" checked />男性</label>
+          <label><input type="radio" name="gender" value="1:男性" />男性</label>
           <label><input type="radio" name="gender" value="2:女性" />女性</label>
           <label><input type="radio" name="gender" value="3:その他" />その他</label>
         </div>

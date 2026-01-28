@@ -80,14 +80,9 @@
           <input type="tel" name="tel_3" placeholder="5678" value="{{ old('tel_3') }}" />
         </div>
         <div class="form__error">
-
-
-<!-- 要修正 -->
-
-
-        @error('tel')
-          {{ $message }}
-          @enderror
+          @if ($errors->has('tel_1') || $errors->has('tel_2') || $errors->has('tel_3'))
+            {{ $errors->first('tel_1') ?? $errors->first('tel_2') ?? $errors->first('tel_3') }}
+          @endif
         </div>
       </div>
     </div>

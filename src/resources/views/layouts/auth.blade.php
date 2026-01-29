@@ -17,12 +17,7 @@
       <a class="header__logo" href="/">
         FashionablyLate
       </a>
-      @hasSection('header-nav_auth')
-        @yield('header-nav_auth')
-      @endif
-      @hasSection('header-nav_admin')
-        @yield('header-nav_admin')
-      @endif
+      @yield('header-nav')
     </div>
   </header>
 

@@ -4,23 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 @endsection
 
-@section('header-nav_admin')
-<nav class="header-nav header-nav--admin">
-    <ul class="header-nav__list">
-        @if (Auth::check())
-        <li class="header-nav__item">
-            <form action="/logout" method="post">
-            @csrf
-            <button class="header-nav__button">logout</button>
-            </form>
-        </li>
-        @endif
-    </ul>
-</nav>
-@endsection
-
 @section('content')
-
 <div class="admin-dashboard__content">
   <div class="admin-dashboard__heading">
     <h2>Admin</h2>
@@ -33,7 +17,7 @@
 
 
 
-  
+
   <form class="form" action="/confirm" method="post">
     @csrf
     <div class="form__group">

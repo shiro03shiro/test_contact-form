@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 @endsection
 
-@section('header-nav_auth')
-<nav class="header-nav header-nav--auth">
+@section('header-nav')
+<nav class="header-nav">
     <ul class="header-nav__list">
         <li class="header-nav__item">
             <a class="header-nav__link" href="/login">login</a>

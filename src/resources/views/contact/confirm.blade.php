@@ -89,7 +89,8 @@
       <a href="{{ route('contact.form') }}" class="form__button-back">修正</a>
     </div> -->
   </form>
-  <form action="{{ route('contact.form') }}" method="get">
+  <form action="{{ route('contact.form') }}" method="post">
+    @csrf
     <div class="form__button">
       <button type="submit" class="form__button-back">修正</button>
     </div>

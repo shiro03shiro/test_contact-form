@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function index()
-    {
-        $contacts = Contact::all();
-        return view('index', ['contacts' => $contacts]);
-    }
+    // public function index()
+    // {
+    //     $contacts = Contact::all();
+    //     return view('index', ['contacts' => $contacts]);
+    // }
 }

@@ -25,6 +25,15 @@
   <div class="admin-dashboard__heading">
     <h2>Admin</h2>
   </div>
+
+
+
+
+
+
+
+
+  
   <form class="form" action="/confirm" method="post">
     @csrf
     <div class="form__group">

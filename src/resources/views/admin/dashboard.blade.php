@@ -33,6 +33,53 @@
       <table class="contact-table__inner">
         <tr class="contact-table__row">
           <th class="contact-table__header">お名前</th>
+          <th class="contact-table__header">性別</th>
+          <th class="contact-table__header">メールアドレス</th>
+          <th class="contact-table__header">お問い合わせの種類</th>
+        </tr>
+        <tr class="contact-table__row">
+          <td class="contact-table__text">
+            <input type="text" value="{{ $contact['name'] }}" readonly />
+          </td>
+          <td class="contact-table__text">
+            <input type="radio" value="{{ $contact['gender'] }}" readonly />
+          </td>
+          <td class="contact-table__text">
+            <input type="email" value="{{ $contact['email'] }}" readonly />
+          </td>
+          <td class="contact-table__text">
+            <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}" />
+            <select disabled>
+              <option value="" disabled>選択してください</option>
+              @foreach($categories as $category)
+                <option value="{{ $category->id }}" {{ $contact['category_id'] == $category->id ? 'selected' : '' }}>
+                  {{ $category->content }}
+                </option>
+              @endforeach
+            </select>
+          </td>
+          <td class="contact-table__button">
+            <div class="form__button">
+              <button class="form__button-submit" type="submit">送信</button>
+            </div>
+            <div class="form__button">
+              <a href="{{ route('contact.form') }}" class="form__button-back">修正</a>
+            </div>
+          </td>
+        </tr>
+
+  </form>
+</div>
+
+
+
+<!-- モーダル用 -->
+  <form class="form" action="/search" method="post">
+    @csrf
+    <div class="contact-table">
+      <table class="contact-table__inner">
+        <tr class="contact-table__row">
+          <th class="contact-table__header">お名前</th>
           <td class="contact-table__text">
             <input type="text" value="{{ $contact['name'] }}" readonly />
           </td>
@@ -96,6 +143,15 @@
       <a href="{{ route('contact.form') }}" class="form__button-back">修正</a>
     </div>
   </form>
-</div>
+
+
+
+
+
+
+
+
+
+
 
 @endsection

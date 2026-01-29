@@ -22,7 +22,21 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">性別</th>
           <td class="confirm-table__radio">
-            <input type="radio" value="{{ $contact['gender'] }}" readonly />
+            <!-- <input type="radio" value="{{ $contact['gender'] }}" readonly /> -->
+          @switch($contact['gender'])
+            @case('1')
+                <input type="radio" readonly />男性
+                @break
+            @case('2')
+                <input type="radio" readonly />女性
+                @break
+            @case('3')
+                <input type="radio" readonly />その他
+                @break
+            <!-- @default
+                未選択 -->
+          @endswitch
+    <input type="hidden" name="gender" value="{{ $contact['gender'] }}">
           </td>
         </tr>
         <tr class="confirm-table__row">

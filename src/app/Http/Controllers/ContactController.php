@@ -5,6 +5,9 @@ use App\Models\Contact;
 use App\Models\Category;
 use App\Http\Requests\ContactRequest;
 
+use Illuminate\Http\Request;        //仮入力
+
+
 class ContactController extends Controller
 {
     public function index()
@@ -12,7 +15,9 @@ class ContactController extends Controller
         $categories = Category::orderBy('id')->get(['id', 'content']);
         return view('contact.form', compact('categories'));
     }
-    public function confirm(ContactRequest $request)
+    // public function confirm(ContactRequest $request)
+    public function confirm(Request $request)
+
     {
         $contact = $request->only(['category_id', 'first_name', 'last_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
 
@@ -21,7 +26,9 @@ class ContactController extends Controller
         $contact['tel'] = implode('', $tel_parts);
 
         $categories = Category::orderBy('id')->get(['id', 'content']);
-        return view('contact.confirm', compact('contact'));
+        return view('contact.confirm', compact('contact', 'categories'));
+        // return view('contact.confirm');
+
     }
     public function store(ContactRequest $request)
     {

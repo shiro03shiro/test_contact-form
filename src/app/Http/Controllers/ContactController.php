@@ -10,7 +10,7 @@ class ContactController extends Controller
     public function index()
     {
         $categories = Category::orderBy('id')->get(['id', 'content']);
-        return view('contact.form', compact('categories'));
+        return view('home', compact('categories'));
     }
     public function confirm(ContactRequest $request)
     {
@@ -22,6 +22,11 @@ class ContactController extends Controller
 
         $categories = Category::orderBy('id')->get(['id', 'content']);
         return view('contact.confirm', compact('contact', 'categories'));
+    }
+    public function create()
+    {
+        $categories = Category::orderBy('id')->get(['id', 'content']);
+        return view('contact.form', compact('categories'));
     }
     public function store(ContactRequest $request)
     {

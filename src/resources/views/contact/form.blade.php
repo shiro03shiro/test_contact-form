@@ -10,7 +10,7 @@
   <div class="contact-form__heading">
     <h2>Contact</h2>
   </div>
-  <form class="form" action="{{ route('contact.confirm') }}" method="post">
+  <form class="form" action="{{ route('home') }}" method="post">
     @csrf
     <div class="form__group">
       <div class="form__group-title">
@@ -79,11 +79,11 @@
           <span class="tel-separator">-</span>
           <input type="tel" name="tel_3" placeholder="5678" value="{{ old('tel_3') }}" />
         </div>
-        <div class="form__error">
+        <!-- <div class="form__error">
           @error('tel')
           {{ $message }}
           @enderror
-        </div>
+        </div> -->
         <!-- <div class="form__error">
           @if ($errors->has('tel_1') || $errors->has('tel_2') || $errors->has('tel_3'))
             {{ $errors->first('tel_1') ?? $errors->first('tel_2') ?? $errors->first('tel_3') }}

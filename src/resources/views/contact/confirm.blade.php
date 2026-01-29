@@ -9,7 +9,7 @@
   <div class="confirm__heading">
     <h2>Confirm</h2>
   </div>
-  <form class="form" action="/thanks" method="post">
+  <form class="form" action="{{ route('contact.thanks') }}" method="post">
     @csrf
     <div class="confirm-table">
       <table class="confirm-table__inner">
@@ -85,8 +85,13 @@
     <div class="form__button">
       <button class="form__button-submit" type="submit">送信</button>
     </div>
-    <div class="form__button">
+    <!-- <div class="form__button">
       <a href="{{ route('contact.form') }}" class="form__button-back">修正</a>
+    </div> -->
+  </form>
+  <form action="{{ route('home') }}" method="get">
+    <div class="form__button">
+      <button type="submit" class="form__button-back">修正</button>
     </div>
   </form>
 </div>

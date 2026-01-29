@@ -1,24 +1,22 @@
-
-
-<!-- appBLADE -->
-    <!-- <ul class="header-nav">
-    @if (Auth::check())
-    <li class="header-nav__item">
-        <form action="/logout" method="post">
-        @csrf
-        <button class="header-nav__button">ログアウト</button>
-        </form>
-    </li>
-    @endif
-    </ul> -->
-
-
-
-
 @extends('layouts.app')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/contact_form.css') }}">
+@endsection
+
+@section('header-nav_admin')
+<nav class="header-nav header-nav--admin">
+    <ul class="header-nav__list">
+        @if (Auth::check())
+        <li class="header-nav__item">
+            <form action="/logout" method="post">
+            @csrf
+            <button class="header-nav__button">logout</button>
+            </form>
+        </li>
+        @endif
+    </ul>
+</nav>
 @endsection
 
 @section('content')

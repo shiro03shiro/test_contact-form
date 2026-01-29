@@ -4,11 +4,11 @@
 <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 @endsection
 
-@section('header-nav')
-<nav>
-    <ul class="header-nav">
+@section('header-nav_auth')
+<nav class="header-nav header-nav--auth">
+    <ul class="header-nav__list">
         <li class="header-nav__item">
-            <a class="header-nav__link" href="href="/register">register</a>
+            <a class="header-nav__link" href="/register">register</a>
         </li>
     </ul>
 </nav>

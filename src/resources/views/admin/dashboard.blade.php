@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/contact_form.css') }}">
+<link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 @endsection
 
 @section('header-nav_admin')
@@ -21,9 +21,9 @@
 
 @section('content')
 
-<div class="contact-form__content">
-  <div class="contact-form__heading">
-    <h2>Contact</h2>
+<div class="admin-dashboard__content">
+  <div class="admin-dashboard__heading">
+    <h2>Admin</h2>
   </div>
   <form class="form" action="/confirm" method="post">
     @csrf

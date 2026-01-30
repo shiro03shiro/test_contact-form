@@ -32,21 +32,20 @@ class ContactFactory extends Factory
 
     public function definition()
     {
-        $faker = \Faker\Factory::create('ja_JP');
         $maxNumber = 5;
-        $randomNumber = $faker->numberBetween(1, $maxNumber);
+        $randomNumber = $this->faker->numberBetween(1, $maxNumber);
         $randomPrefecture = $this->prefectures[array_rand($this->prefectures)];
 
         return [
             'first_name' => $this->faker->firstName(),
             'last_name' => $this->faker->lastName(),
-            'gender' => $faker->numberBetween(1, 3),
+            'gender' => $this->faker->numberBetween(1, 3),
             'email' => $this->faker->safeEmail(),
             'tel' => $this->faker->phoneNumber(),
-            'address' => $randomPrefecture . $faker->city . $faker->streetAddress,
-            'building' => $this->faker->secondaryAddress,
+            'address' => $randomPrefecture . $this->faker->city() . $this->faker->streetAddress(),
+            'building' => $this->faker->secondaryAddress(),
             'category_id' => $randomNumber,
-            'detail' => $this->faker->realText(120,4),
+            'detail' => $this->faker->realText(120, 4),
         ];
     }
 }

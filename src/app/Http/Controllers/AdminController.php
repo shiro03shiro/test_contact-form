@@ -11,6 +11,6 @@ class AdminController extends Controller
     public function index()
     {
         $contacts = Contact::all();
-        return view('admin.dashboard', ['contacts' => $contacts]);
+        return view('admin.admin-test', ['contacts' => $contacts]);
     }
 }

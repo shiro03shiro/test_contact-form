@@ -40,7 +40,7 @@ class ContactFactory extends Factory
         return [
             'first_name' => $this->faker->firstName(),
             'last_name' => $this->faker->lastName(),
-            'gender' => $this->faker->randomElement(['男性', '女性', 'その他']),
+            'gender' => $faker->numberBetween(1, 3),
             'email' => $this->faker->safeEmail(),
             'tel' => $this->faker->phoneNumber(),
             'address' => $randomPrefecture . $faker->city . $faker->streetAddress,

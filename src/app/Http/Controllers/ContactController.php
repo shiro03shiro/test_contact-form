@@ -14,9 +14,9 @@ class ContactController extends Controller
     }
     public function create(ContactRequest $request)
     {
-        $contact = $request->only(['category_id', 'first_name', 'last_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
+        $contact = $request->only(['category_id', 'last_name', 'first_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
 
-        $contact['name'] = trim($contact['first_name'] . ' ' . $contact['last_name']);
+        $contact['name'] = trim($contact['last_name'] . ' ' . $contact['first_name']);
         $tel_parts = array_filter([$contact['tel_1'], $contact['tel_2'], $contact['tel_3']]);
         $contact['tel'] = implode('', $tel_parts);
 
@@ -25,9 +25,9 @@ class ContactController extends Controller
     }
     public function confirm(ContactRequest $request)
     {
-        $contact = $request->only(['category_id', 'first_name', 'last_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
+        $contact = $request->only(['category_id', 'last_name', 'first_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
 
-        $contact['name'] = trim($contact['first_name'] . ' ' . $contact['last_name']);
+        $contact['name'] = trim($contact['last_name'] . ' ' . $contact['first_name']);
         $tel_parts = array_filter([$contact['tel_1'], $contact['tel_2'], $contact['tel_3']]);
         $contact['tel'] = implode('', $tel_parts);
 
@@ -41,7 +41,7 @@ class ContactController extends Controller
     // }
     public function store(ContactRequest $request)
     {
-        $contact = $request->only(['category_id', 'first_name', 'last_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
+        $contact = $request->only(['category_id', 'last_name', 'first_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
 
         $tel_parts = array_filter([$contact['tel_1'], $contact['tel_2'], $contact['tel_3']]);
         $contact['tel'] = implode('', $tel_parts);

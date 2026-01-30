@@ -1,0 +1,59 @@
+0000000000000000000000000000000000000000 9852cfb2654bb73d4d615f5a53a95ba7ca271177 shiro <okano.03.remi@gmail.com> 1769308606 +0900	commit (initial): first commit
+9852cfb2654bb73d4d615f5a53a95ba7ca271177 9852cfb2654bb73d4d615f5a53a95ba7ca271177 shiro <okano.03.remi@gmail.com> 1769308606 +0900	Branch: renamed refs/heads/master to refs/heads/main
+9852cfb2654bb73d4d615f5a53a95ba7ca271177 d30102316208e1926750b22d371bbb477768cd57 shiro <okano.03.remi@gmail.com> 1769311133 +0900	commit: Add Docker configuration and source files
+d30102316208e1926750b22d371bbb477768cd57 934fa5a93047e9567138a0ce538875a8b72ab732 shiro <okano.03.remi@gmail.com> 1769323155 +0900	commit: クローン試行済み
+934fa5a93047e9567138a0ce538875a8b72ab732 4f7235166ade718471c68632f89ffa13446d18ff shiro <okano.03.remi@gmail.com> 1769344794 +0900	commit: mysql:[Warning] Clear
+4f7235166ade718471c68632f89ffa13446d18ff a266326e056016610e5c00eab63210365f29b4cf shiro <okano.03.remi@gmail.com> 1769352477 +0900	commit: migrate
+a266326e056016610e5c00eab63210365f29b4cf 593f831badde3f870dee7d34a5cc22bcb675f708 shiro <okano.03.remi@gmail.com> 1769353202 +0900	commit: rm-seeder
+593f831badde3f870dee7d34a5cc22bcb675f708 67c2ad68aa491b45bb46fa02d5b109497f27b4e5 shiro <okano.03.remi@gmail.com> 1769353921 +0900	commit: README（仮入力）
+67c2ad68aa491b45bb46fa02d5b109497f27b4e5 6fc4343ce2ece2518b267be4f0d7861c51a2e768 shiro <okano.03.remi@gmail.com> 1769354089 +0900	commit: README（書式のみ）
+6fc4343ce2ece2518b267be4f0d7861c51a2e768 63d007e2fa78bc858e3a7973f9cccf68bb39f9da shiro <okano.03.remi@gmail.com> 1769408914 +0900	commit: table,controller,model（3種類仮作成）
+63d007e2fa78bc858e3a7973f9cccf68bb39f9da 765f7e36a5720189cfaba57ee5f85ba06145cb96 shiro <okano.03.remi@gmail.com> 1769434075 +0900	commit: index(form).blade.php_layout
+765f7e36a5720189cfaba57ee5f85ba06145cb96 3497787095a7afc0397b2fe8c0e98a6976de7788 shiro <okano.03.remi@gmail.com> 1769436302 +0900	commit: contact/form.blade
+3497787095a7afc0397b2fe8c0e98a6976de7788 4d949d8fee2d52efe2facd70bdd565bce6f84d65 shiro <okano.03.remi@gmail.com> 1769436441 +0900	commit: index_delete,contact_form.css
+4d949d8fee2d52efe2facd70bdd565bce6f84d65 baf0079ca3ff2987beb2a8f06ba7e0a176e051ca shiro <okano.03.remi@gmail.com> 1769438917 +0900	commit: form_OK(PP-Check)
+baf0079ca3ff2987beb2a8f06ba7e0a176e051ca d2472b9cec8c8a725f372c9791fb745ec3c4d347 shiro <okano.03.remi@gmail.com> 1769479602 +0900	commit: form-select要修正
+d2472b9cec8c8a725f372c9791fb745ec3c4d347 6426e1fce191b5fabad7838905162ac04c4832ba shiro <okano.03.remi@gmail.com> 1769482805 +0900	commit: model,controller_confirm修正前
+6426e1fce191b5fabad7838905162ac04c4832ba c7de235ee9884d8e5d7d594025beb85b7076652f shiro <okano.03.remi@gmail.com> 1769491165 +0900	commit: コントローラ整理前
+c7de235ee9884d8e5d7d594025beb85b7076652f 6a1d11fd207ac9d97d93226955a73d0879269dd4 shiro <okano.03.remi@gmail.com> 1769491676 +0900	commit: コントローラ整理後（仮入力）
+6a1d11fd207ac9d97d93226955a73d0879269dd4 28a3d14ac3fbb326cff838c6fd50c3c3aea99146 shiro <okano.03.remi@gmail.com> 1769498108 +0900	commit: auth-controller_next>>select-option,confirmBLADE...
+28a3d14ac3fbb326cff838c6fd50c3c3aea99146 ed578e19ebb48cadafacbed20fda361cce45ad90 shiro <okano.03.remi@gmail.com> 1769532036 +0900	commit: select-option,name+value修正
+ed578e19ebb48cadafacbed20fda361cce45ad90 72bef950e4ddccab132f43ac41addf227d6b1a2a shiro <okano.03.remi@gmail.com> 1769567125 +0900	commit: thanks（表示未確認）
+72bef950e4ddccab132f43ac41addf227d6b1a2a 6cbc7c242373d377311aea22205a1d8aa6fb2690 shiro <okano.03.remi@gmail.com> 1769577763 +0900	commit: ContactRequest
+6cbc7c242373d377311aea22205a1d8aa6fb2690 b41a2c5fcb230ae06a69f5a46bb6a4fe7707cd31 shiro <okano.03.remi@gmail.com> 1769581303 +0900	commit: formBLADE-telERROR
+b41a2c5fcb230ae06a69f5a46bb6a4fe7707cd31 375a2977ac93029863977ec2a51a38bb43c0e86c shiro <okano.03.remi@gmail.com> 1769581544 +0900	commit: 男性checked-
+375a2977ac93029863977ec2a51a38bb43c0e86c b41febf378057232ff40da25ae5f0a844da7538d shiro <okano.03.remi@gmail.com> 1769583950 +0900	commit: CategoriesTableSeeder
+b41febf378057232ff40da25ae5f0a844da7538d 32928637ce48e34fdb7b411ade3dcfd21171ecbb shiro <okano.03.remi@gmail.com> 1769605593 +0900	commit: Fortify-register/login
+32928637ce48e34fdb7b411ade3dcfd21171ecbb 06605f938c9cf83a99616ae07651d991c6d1b955 shiro <okano.03.remi@gmail.com> 1769606087 +0900	commit: @hasSection('header-nav')
+06605f938c9cf83a99616ae07651d991c6d1b955 691f883c8f5e032b73bc4dcfc078697f18f4c0f2 shiro <okano.03.remi@gmail.com> 1769609960 +0900	commit: Provider,gender.*
+691f883c8f5e032b73bc4dcfc078697f18f4c0f2 6c96d9df63d00a6bf7f44b3cc3f6507c52a4b678 shiro <okano.03.remi@gmail.com> 1769610521 +0900	commit: ->name('home');「;」重複削除
+6c96d9df63d00a6bf7f44b3cc3f6507c52a4b678 41d0892e8332d6e115d698dd941188ff8c6b96cf shiro <okano.03.remi@gmail.com> 1769650980 +0900	commit: inquiry->formBLADE_cp
+41d0892e8332d6e115d698dd941188ff8c6b96cf 4a492bdd3b8ab8b2c4fd5f809090077d1f39261c shiro <okano.03.remi@gmail.com> 1769653239 +0900	commit: nav@hasSection
+4a492bdd3b8ab8b2c4fd5f809090077d1f39261c 83197e0fa68c79a8f8269d9e6c5b3f28ebfaf819 shiro <okano.03.remi@gmail.com> 1769661941 +0900	commit: admin-dashboard
+83197e0fa68c79a8f8269d9e6c5b3f28ebfaf819 8bfe51c0245805b06ee5539aa2bab566b84585bc shiro <okano.03.remi@gmail.com> 1769665725 +0900	commit: layouts/auth,admin↔register,login,dashboard-nav修正前
+8bfe51c0245805b06ee5539aa2bab566b84585bc c2b3425d0300a07e05ee45243f765057ce7e08c5 shiro <okano.03.remi@gmail.com> 1769667944 +0900	commit: nav修正後
+c2b3425d0300a07e05ee45243f765057ce7e08c5 8ca3b706d36ee6c0dec36fab443ebaa9452c2b94 shiro <okano.03.remi@gmail.com> 1769669145 +0900	commit: dashboard->confirm
+8ca3b706d36ee6c0dec36fab443ebaa9452c2b94 1e9f16463b3d80a782a7a80a17d00cc84a388c5b shiro <okano.03.remi@gmail.com> 1769670286 +0900	commit: tb-input削除前
+1e9f16463b3d80a782a7a80a17d00cc84a388c5b f795c6fc129e8c670f4d23d7f07f6da651fcbab9 shiro <okano.03.remi@gmail.com> 1769671881 +0900	commit: input_clear
+f795c6fc129e8c670f4d23d7f07f6da651fcbab9 5cd942a180cfaaabeafbdad29bb94b26bf9bf72d shiro <okano.03.remi@gmail.com> 1769686835 +0900	commit: /confirm遷移しない、名前付きルート修正前
+5cd942a180cfaaabeafbdad29bb94b26bf9bf72d b8486a36a83c749c408fd6f615dcfcc15ae774a8 shiro <okano.03.remi@gmail.com> 1769694377 +0900	commit: /confirm_test
+b8486a36a83c749c408fd6f615dcfcc15ae774a8 16b867b90d5b0ea6510652757e77f63529ec858b shiro <okano.03.remi@gmail.com> 1769694896 +0900	commit: 00
+16b867b90d5b0ea6510652757e77f63529ec858b 6c12c615209bc2d95b435116886eb2bc9abd0358 shiro <okano.03.remi@gmail.com> 1769696198 +0900	commit: confirmへ遷移、修正リンク→フォームボタンにしないと値なし
+6c12c615209bc2d95b435116886eb2bc9abd0358 1bb9c8dec406d4227209b24b135bcbe74560f1c8 shiro <okano.03.remi@gmail.com> 1769699264 +0900	commit: tel_regex,gender_label
+1bb9c8dec406d4227209b24b135bcbe74560f1c8 3731edf6c47d8b9f5690d48f5387e7fe98e3fd9a shiro <okano.03.remi@gmail.com> 1769701357 +0900	commit: tel-with/bail
+3731edf6c47d8b9f5690d48f5387e7fe98e3fd9a 5aab6bb7909e77068d014ecd565aa1b440770feb shiro <okano.03.remi@gmail.com> 1769703374 +0900	commit: 混乱…修正ボタン"{{ route('home') }}"
+5aab6bb7909e77068d014ecd565aa1b440770feb 4ec9eda6484bc609677e9d397f802329704c4499 shiro <okano.03.remi@gmail.com> 1769704179 +0900	commit: 混乱～手動復元「home」「contact.form」ほか
+4ec9eda6484bc609677e9d397f802329704c4499 fb60ebcf18231099b102d579281e4aa9834cca99 shiro <okano.03.remi@gmail.com> 1769704471 +0900	commit: また遷移しない
+fb60ebcf18231099b102d579281e4aa9834cca99 ea91a53dceb91bb46efcda47f4f3215a7c582324 shiro <okano.03.remi@gmail.com> 1769705179 +0900	commit: confirm遷移+create(),送信+修正「The Get method is ~」
+ea91a53dceb91bb46efcda47f4f3215a7c582324 07fc46919a25c823fa5de11b9a9a8ae8127b4f65 shiro <okano.03.remi@gmail.com> 1769705256 +0900	commit: 修正ボタン保持なしform遷移
+07fc46919a25c823fa5de11b9a9a8ae8127b4f65 1f00b535881a34990cc91673c273a322b4e76c7f shiro <okano.03.remi@gmail.com> 1769706425 +0900	commit: dash表示（仮）Admin作成
+1f00b535881a34990cc91673c273a322b4e76c7f 8364b317d253ad29dc67c72afb349c6078665a67 shiro <okano.03.remi@gmail.com> 1769744202 +0900	commit: Factory-ﾏｲｸﾞﾚ順序修正へ
+8364b317d253ad29dc67c72afb349c6078665a67 e8c3264aff1c575666a56217ddf4f919c72e347e shiro <okano.03.remi@gmail.com> 1769744935 +0900	commit: Factory_config/app.php>ja_JP修正前
+e8c3264aff1c575666a56217ddf4f919c72e347e 77aba0d692f0ea5579e20a64da8eae2c409e1a64 shiro <okano.03.remi@gmail.com> 1769746255 +0900	commit: ダミーデータOK
+77aba0d692f0ea5579e20a64da8eae2c409e1a64 65da95c45e29cf697c8829f32fe5ae50a74d7b0f shiro <okano.03.remi@gmail.com> 1769747675 +0900	commit: name_first,last逆と勘違い
+65da95c45e29cf697c8829f32fe5ae50a74d7b0f 640e4615bd29ff686299a11663a21cee56f31f01 shiro <okano.03.remi@gmail.com> 1769748089 +0900	commit: name修正抜かり
+640e4615bd29ff686299a11663a21cee56f31f01 931c9f81dbc966c8bf8eae7fdd81a68d5618c7ae shiro <okano.03.remi@gmail.com> 1769748279 +0900	commit: admin-test表示OK
+931c9f81dbc966c8bf8eae7fdd81a68d5618c7ae 6a6625f61e1669167819e6fbb7ad6101b82d023b shiro <okano.03.remi@gmail.com> 1769748817 +0900	commit: dash、AdminCon修正前
+6a6625f61e1669167819e6fbb7ad6101b82d023b df7f265f95f671020879d69a99a5f338d354130e shiro <okano.03.remi@gmail.com> 1769749038 +0900	commit: dash-AdminConとりあえず表示OK
+df7f265f95f671020879d69a99a5f338d354130e 0843d1b2f00da2ffda4d555570d63cd13aa0056b shiro <okano.03.remi@gmail.com> 1769752401 +0900	commit: dash-差し替え、表示OK
+                                                                                                                                                                                 

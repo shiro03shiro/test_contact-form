@@ -12,16 +12,16 @@
   <table>
     <tr>
       <th>id</th>
-      <th>name</th>
-      <th>age</th>
-      <th>nationality</th>
+      <th>first_name</th>
+      <th>gender</th>
+      <th>email</th>
     </tr>
-    @foreach ($authors as $author)
+    @foreach ($contacts as $contact)
     <tr>
-      <td>{{$author->id}}</td>
-      <td>{{$author->name}}</td>
-      <td>{{$author->age}}</td>
-      <td>{{$author->nationality}}</td>
+      <td>{{$contact->id}}</td>
+      <td>{{$contact->first_name}}</td>
+      <td>{{$contact->gender}}</td>
+      <td>{{$contact->email}}</td>
     </tr>
     @endforeach
   </table>

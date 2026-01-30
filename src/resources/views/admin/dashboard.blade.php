@@ -1,3 +1,8 @@
+@dump($contacts)  {{-- 変数確認用 --}}
+@dump($categories)
+
+<div>ページレイアウト確認中...</div>
+
 @extends('layouts.app')
 
 @section('css')

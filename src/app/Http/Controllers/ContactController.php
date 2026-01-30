@@ -34,11 +34,6 @@ class ContactController extends Controller
         $categories = Category::orderBy('id')->get(['id', 'content']);
         return view('contact.confirm', compact('contact', 'categories'));
     }
-    // public function create()
-    // {
-    //     $categories = Category::orderBy('id')->get(['id', 'content']);
-    //     return view('contact.form', compact('categories'));
-    // }
     public function store(ContactRequest $request)
     {
         $contact = $request->only(['category_id', 'last_name', 'first_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
@@ -50,9 +45,5 @@ class ContactController extends Controller
 
         Contact::create($contact);
         return view('contact.thanks');
-    }
-    public function admin()
-    {
-        return view('admin.dashboard');
     }
 }

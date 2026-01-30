@@ -8,7 +8,7 @@
     <th>gender</th>
     <th>email</th>
   </tr>
-  @foreach ($contact as $contact)
+  @foreach ($contacts as $contact)
   <tr>
     <td>{{$contact->id}}</td>
     <td>{{$contact->first_name}}</td>

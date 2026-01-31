@@ -17,8 +17,8 @@
 
 ### 開発環境
 
-- お問い合わせ画面：http://ocalhost/
-- ユーザー登録：http:/localhost/register
+- お問い合わせ画面：http://localhost/
+- ユーザー登録：http://localhost/register
 - phpMyAdmin : http://localhost:8080/
 
 ## 使用技術（実行環境）
@@ -31,4 +31,4 @@
 
 ## ER図
 
-<-- -->
+<-- index.drawio.png -->

@@ -8,9 +8,6 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard', [
-            'contacts' => collect([]),
-            'categories' => collect([])
-        ]);
+        return view('admin.dashboard');
     }
 }

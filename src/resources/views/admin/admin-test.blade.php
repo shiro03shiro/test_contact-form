@@ -17,4 +17,149 @@
   </tr>
   @endforeach
 </table>
+
+
+
+<div class="admin-dashboard__content">
+  <h2>Admin Dashboard レイアウト確認</h2>
+
+  {{-- デバッグ情報 --}}
+  <p>Contacts: {{ $contacts->count() }}件</p>
+  <p>Categories: {{ $categories->count() }}件</p>
+
+  {{-- シンプルなテーブル（エラーなし） --}}
+  @if($contacts->count() > 0)
+    <table>
+      <tr><th>ID</th><th>Name</th></tr>
+      @foreach($contacts->take(5) as $contact)
+        <tr>
+          <td>{{ $contact->id ?? 'N/A' }}</td>
+          <td>{{ $contact->first_name ?? 'N/A' }}</td>
+        </tr>
+      @endforeach
+    </table>
+  @else
+    <p>データなし（正常）</p>
+  @endif
+</div>
+
+
+
+
+
+
+  <form class="form" action="/search" method="post">
+    @csrf
+
+
+    <div class="contact-table">
+      <table class="contact-table__inner">
+        <tr class="contact-table__row">
+          <th class="contact-table__header">お名前</th>
+          <th class="contact-table__header">性別</th>
+          <th class="contact-table__header">メールアドレス</th>
+          <th class="contact-table__header">お問い合わせの種類</th>
+        </tr>
+        @foreach ($contacts as $contact)
+        <tr class="contact-table__row">
+          <td class="contact-table__text">{{ $contact['name'] }}</td>
+          <td class="contact-table__text">{{ $contact['gender'] }}</td>
+          <td class="contact-table__text">{{ $contact['email'] }}</td>
+          <td class="contact-table__text">
+            <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}" />
+            {{ $categories->find($contact['category_id'])?->content }}
+          </td>
+          <td class="contact-table__button">
+            <div class="form__button">
+              <button class="form__button-submit" type="submit">詳細</button>
+            </div>
+          </td>
+        </tr>
+        @endforeach
+
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- モーダル用 -->
+  <form class="form" action="/search" method="post">
+    @csrf
+    <div class="contact-table">
+      <table class="contact-table__inner">
+        <tr class="contact-table__row">
+          <th class="contact-table__header">お名前</th>
+          <td class="contact-table__text">
+            <input type="text" value="{{ $contact['name'] }}" readonly />
+          </td>
+        </tr>
+        <tr class="contact-table__row">
+          <th class="contact-table__header">性別</th>
+          <td class="contact-table__radio">
+            <input type="radio" value="{{ $contact['gender'] }}" readonly />
+          </td>
+        </tr>
+        <tr class="contact-table__row">
+          <th class="contact-table__header">メールアドレス</th>
+          <td class="contact-table__text">
+            <input type="email" value="{{ $contact['email'] }}" readonly />
+          </td>
+        </tr>
+        <tr class="contact-table__row">
+          <th class="confirm-table__header">電話番号</th>
+          <td class="contact-table__text">
+            <input type="tel" value="{{ $contact['tel'] }}" readonly />
+          </td>
+        </tr>
+        <tr class="contact-table__row">
+          <th class="contact-table__header">住所</th>
+          <td class="contact-table__text">
+            <input type="text" value="{{ $contact['address'] }}" readonly />
+          </td>
+        </tr>
+        <tr class="contact-table__row">
+          <th class="contact-table__header">建物名</th>
+          <td class="contact-table__text">
+            <input type="text" value="{{ $contact['building'] }}" readonly />
+          </td>
+        </tr>
+        <tr class="contact-table__row">
+          <th class="contact-table__header">お問い合わせの種類</th>
+          <td class="contact-table__select">
+            <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}" />
+            <select disabled>
+              <option value="" disabled>選択してください</option>
+              @foreach($categories as $category)
+                <option value="{{ $category->id }}" {{ $contact['category_id'] == $category->id ? 'selected' : '' }}>
+                  {{ $category->content }}
+                </option>
+              @endforeach
+            </select>
+          </td>
+        </tr>
+        <tr class="contact-table__row">
+          <th class="contact-table__header">お問い合わせ内容</th>
+          <td class="contact-table__text">
+            <input type="text" value="{{ $contact['detail'] }}" readonly />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="form__button">
+      <button class="form__button-submit" type="submit">送信</button>
+    </div>
+    <div class="form__button">
+      <a href="{{ route('contact.form') }}" class="form__button-back">修正</a>
+    </div>
+  </form>
+
+
 @endsection

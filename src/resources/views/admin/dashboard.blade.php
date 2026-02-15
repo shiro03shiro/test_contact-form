@@ -1,26 +1,32 @@
 @extends('layouts.admin')
 
 @section('content')
+
 <div class="admin-dashboard__content">
-  <h2>Admin Dashboard レイアウト確認</h2>
+  <div class="admin-dashboard__heading">
+    <h2>Admin</h2>
+  </div>
 
-  {{-- デバッグ情報 --}}
-  <p>Contacts: {{ $contacts->count() }}件</p>
-  <p>Categories: {{ $categories->count() }}件</p>
+<table>
+  <tr>
+    <th>id</th>
+    <th>first_name</th>
+    <th>gender</th>
+    <th>email</th>
+  </tr>
+  @foreach ($contacts as $contact)
+  <tr>
+    <td>{{$contact->id}}</td>
+    <td>{{$contact->first_name}}</td>
+    <td>{{$contact->gender}}</td>
+    <td>{{$contact->email}}</td>
+  </tr>
+  @endforeach
+</table>
 
-  {{-- シンプルなテーブル（エラーなし） --}}
-  @if($contacts->count() > 0)
-    <table>
-      <tr><th>ID</th><th>Name</th></tr>
-      @foreach($contacts->take(5) as $contact)
-        <tr>
-          <td>{{ $contact->id ?? 'N/A' }}</td>
-          <td>{{ $contact->first_name ?? 'N/A' }}</td>
-        </tr>
-      @endforeach
-    </table>
-  @else
-    <p>データなし（正常）</p>
-  @endif
-</div>
+
+
+
+
+
 @endsection

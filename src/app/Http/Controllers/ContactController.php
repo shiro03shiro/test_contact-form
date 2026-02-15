@@ -36,6 +36,10 @@ class ContactController extends Controller
     }
     public function store(ContactRequest $request)
     {
+        if ($request->has('back')) {
+            return redirect('/')->withInput();
+        }
+
         $contact = $request->only(['category_id', 'last_name', 'first_name', 'gender', 'email', 'tel_1', 'tel_2', 'tel_3', 'address', 'building', 'detail']);
 
         $tel_parts = array_filter([$contact['tel_1'], $contact['tel_2'], $contact['tel_3']]);
